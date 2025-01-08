@@ -2,6 +2,8 @@
 
 namespace Database\Factories;
 
+use App\Models\Post;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -14,10 +16,12 @@ class CategoryFactory extends Factory
      *
      * @return array<string, mixed>
      */
-    public function definition(): array
+    public function definition()
     {
         return [
-            //
+            'content' => $this->faker->sentence(),
+            'user_id' => User::inRandomOrder()->first()->id,
+            'post_id' => Post::inRandomOrder()->first()->id,
         ];
     }
 }
