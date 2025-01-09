@@ -32,7 +32,7 @@
 
         <!-- Slot for Admin Content -->
         <div class="mt-6">
-            {!! $slot !!}
+            @yield('content')
         </div>
     </main>
 </body>
