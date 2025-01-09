@@ -3,8 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\PostController;
-use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\DashboardController;
 
 // Public Routes
 Route::get('/', function () {
@@ -24,6 +25,7 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
     Route::get('/admin/users', [UserController::class, 'index'])->name('admin.users');
     Route::post('/admin/users', [UserController::class, 'store'])->name('admin.users.store');
     Route::post('/admin/users/{user}/update-role', [UserController::class, 'updateRole'])->name('admin.users.updateRole');
+    Route::get('/admin/categories', [CategoryController::class, 'index'])->name('admin.categories');
 });
 
 // Author Routes (Only for Authors)

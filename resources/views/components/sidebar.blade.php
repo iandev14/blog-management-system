@@ -23,17 +23,17 @@
                 </a>
             </li>
             <li>
-                <a href="{{ route('admin.posts') }}" class="block py-2 px-4 rounded hover:bg-gray-700">
+                <a href="#" class="block py-2 px-4 rounded hover:bg-gray-700">
                     Posts
                 </a>
             </li>
             <li>
-                <a href="{{ route('admin.comments') }}" class="block py-2 px-4 rounded hover:bg-gray-700">
+                <a href="#" class="block py-2 px-4 rounded hover:bg-gray-700">
                     Comments
                 </a>
             </li>
             <li>
-                <a href="{{ route('admin.settings') }}" class="block py-2 px-4 rounded hover:bg-gray-700">
+                <a href="#" class="block py-2 px-4 rounded hover:bg-gray-700">
                     Settings
                 </a>
             </li>
