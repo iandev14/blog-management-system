@@ -11,26 +11,17 @@
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
     @vite('resources/css/app.css')
+
+    <!-- Include AlpineJS -->
+    <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
 </head>
 
-<body class="bg-gray-100 min-h-screen text-gray-800 flex">
+<body class="bg-gray-100 min-h-screen text-gray-800 flex" x-data="{ open: true }">
     <!-- Sidebar -->
-    <x-sidebar />
+    @include('components.sidebar')
 
     <!-- Main Content -->
-    <main class="flex-1 p-8">
-        <!-- Navbar -->
-        <x-navbar />
-
-        <!-- Page Title -->
-        <header class="flex items-center justify-between bg-white py-4 px-6 shadow">
-            <h1 class="text-2xl font-semibold">{{ $title ?? 'Admin Dashboard' }}</h1>
-            <div>
-                <button class="bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700">Logout</button>
-            </div>
-        </header>
-
-        <!-- Slot for Admin Content -->
+    <main class="flex-1 p-6">
         <div class="mt-6">
             @yield('content')
         </div>
